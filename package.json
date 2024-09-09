@@ -1,0 +1,23 @@
+{
+  "name": "fuzen-broker",
+  "version": "1.0.0",
+  "author": "CARZI",
+  "license": "MIT",
+  "type": "module",
+  "main": "bin/main.js",
+  "types": "bin/main.d.ts",
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec tsc",
+    "prepublishOnly": "rimraf dist && tsc",
+    "tests": "npm run prepublishOnly"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "nodemon": "^3.1.4",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.5.4"
+  }
+}
